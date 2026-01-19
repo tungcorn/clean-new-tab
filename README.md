@@ -24,22 +24,25 @@ A minimal, customizable new tab extension for Microsoft Edge and Google Chrome t
 
 ## 📦 Installation
 
-### From Source (Developer Mode)
+### Quick Install (Recommended)
+
+1. **[Download the latest release](https://github.com/tungcorn/clean-new-tab/releases/latest/download/clean-new-tab-v1.0.0.zip)**
+2. Extract the ZIP file
+3. Open your browser's extension page:
+   - **Edge**: `edge://extensions`
+   - **Chrome**: `chrome://extensions`
+4. Enable **Developer mode** (toggle in top right)
+5. Click **Load unpacked** and select the extracted folder
+6. Open a new tab and enjoy!
+
+### From Source (For Developers)
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/tungcorn/clean-new-tab.git
    ```
 
-2. Open your browser's extension page:
-   - **Edge**: `edge://extensions`
-   - **Chrome**: `chrome://extensions`
-
-3. Enable **Developer mode** (toggle in top right)
-
-4. Click **Load unpacked** and select the cloned folder
-
-5. Open a new tab to see the extension in action!
+2. Follow steps 3-6 above
 
 ## 🎮 Usage
 
