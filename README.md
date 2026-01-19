@@ -93,12 +93,7 @@ Contributions are welcome! Feel free to:
 
 ## 📝 Changelog
 
-### v1.0.0
-- Initial release
-- Custom background support (URL and local files)
-- Quick links management
-- Edit mode for easy link removal
-- Responsive design
+See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ---
 
