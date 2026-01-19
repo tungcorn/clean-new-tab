@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+    transition: background 0.5s;
+}
+
+body.has-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.quick-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.link {
+    width: 90px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.link:hover {
+    transform: translateY(-4px);
+}
+
+.link-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s;
+}
+
+.link:hover .link-icon {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.link-icon img {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.link-name {
+    font-size: 11px;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link .delete-btn {
+    position: absolute;
+    top: -6px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    background: #e74c3c;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+body.edit-mode .link .delete-btn {
+    display: flex;
+}
+
+body.edit-mode .link {
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+.add-link {
+    width: 90px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-link .link-icon {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.add-link:hover .link-icon {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.add-link .link-name {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.settings-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.settings-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+}
+
+.settings-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.settings-panel {
+    position: fixed;
+    bottom: 74px;
+    right: 20px;
+    background: rgba(30, 30, 46, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 20px;
+    width: 320px;
+    color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+.settings-panel.show {
+    display: block;
+}
+
+.settings-panel h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.settings-panel label {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+}
+
+.settings-panel input[type="text"],
+.settings-panel input[type="url"] {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 13px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.settings-panel input:focus {
+    border-color: #6366f1;
+}
+
+.bg-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.bg-option {
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.bg-option:hover {
+    opacity: 0.8;
+}
+
+.bg-option.selected {
+    border-color: #6366f1;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.btn-primary {
+    background: #6366f1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5558e3;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-danger {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background: rgba(231, 76, 60, 0.3);
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 16px 0;
+}
+
+.add-form {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.add-form.show {
+    display: block;
+}
