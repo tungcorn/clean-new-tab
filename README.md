@@ -2,7 +2,17 @@
 
 A minimal, customizable new tab extension for Microsoft Edge and Google Chrome that replaces the default new tab page with a clean, distraction-free interface.
 
-![Preview](preview.png)
+<p align="center">
+  <img src="screenshots/clean.png" alt="Clean New Tab" width="80%">
+  <br>
+  <em>Clean, minimal interface with quick links</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/menu.png" alt="Settings Menu" width="80%">
+  <br>
+  <em>Customizable backgrounds and quick links management</em>
+</p>
 
 ## ✨ Features
 
@@ -18,7 +28,7 @@ A minimal, customizable new tab extension for Microsoft Edge and Google Chrome t
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/clean-new-tab.git
+   git clone https://github.com/tungcorn/clean-new-tab.git
    ```
 
 2. Open your browser's extension page:
@@ -57,10 +67,7 @@ clean-new-tab/
 ├── newtab.html       # New tab page HTML
 ├── app.js            # Main application logic
 ├── styles.css        # Styling
-├── icons/            # Extension icons
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
+├── screenshots/      # README images
 └── README.md         # This file
 ```
 
