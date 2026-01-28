@@ -26,7 +26,7 @@ A minimal, customizable new tab extension for Microsoft Edge and Google Chrome t
 
 ### Quick Install (Recommended)
 
-1. **[Download the latest release](https://github.com/tungcorn/clean-new-tab/releases/latest/download/clean-new-tab-v1.0.0.zip)**
+1. **[Download the latest release](https://github.com/tungcorn/clean-new-tab/releases/latest/download/clean-new-tab.zip)**
 2. Extract the ZIP file
 3. Open your browser's extension page:
    - **Edge**: `edge://extensions`
