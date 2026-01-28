@@ -19,14 +19,8 @@ const defaultBgs = [
     'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920',
 ];
 
-/** Default quick links */
-const defaultLinks = [
-    { name: 'Telegram', url: 'https://web.telegram.org' },
-    { name: 'YouTube', url: 'https://youtube.com' },
-    { name: 'GitHub', url: 'https://github.com' },
-    { name: 'ChatGPT', url: 'https://chat.openai.com' },
-    { name: 'Spotify', url: 'https://open.spotify.com' },
-];
+/** Default quick links (empty by default, users can add their own) */
+const defaultLinks = [];
 
 // ============================================================================
 // STORAGE FUNCTIONS
